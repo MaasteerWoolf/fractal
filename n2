@@ -1,1 +1,17 @@
+# №2
+import turtle as t
+
+t.lt(90)
+def tree(lenght, height, corner):
+    if height == 0:
+        return
+    t.fd(lenght)
+    t.rt(corner)
+    tree(lenght*0.5, height-1, corner)
+    t.lt(corner*2)
+    tree(lenght*0.5, height-1, corner)
+    t.rt(corner)
+    t.bk(lenght)
+tree(100, 5, 30)
+t.update()
 
